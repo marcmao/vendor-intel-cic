@@ -6,6 +6,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 COPY bin/graphic/liblxc_util.so /lib/liblxc_util.so
 COPY bin/graphic/libutil_drm.so /lib/libutil_drm.so
 COPY bin/graphic/libutil_x11.so /lib/libutil_x11.so
+COPY bin/graphic/libbinder.so /lib/libbinder.so
 COPY bin/graphic/libutil_wayland.so /lib/libutil_wayland.so
 COPY bin/graphic/display-daemon-drm /display-daemon-drm
 COPY bin/graphic/display-daemon-x11 /display-daemon-x11

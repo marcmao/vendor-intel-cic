@@ -510,6 +510,9 @@ function install {
     # Create workdir and app direcotry first, otherwise Docker may create it with root permission
     if [ ! -e "$WORK_DIR" ]; then
         mkdir -p $WORK_DIR
+        mkdir -p $WORK_DIR/ipc
+        chmod a+rw $WORK_DIR
+        chmod a+rw $WORK_DIR/ipc
     fi
     if [ ! -e "$APP_DIR" ]; then
         mkdir -p $APP_DIR

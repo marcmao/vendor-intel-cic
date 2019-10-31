@@ -5,6 +5,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 # install essential modules
 RUN apt-get -q -y update \
         && apt-get -q -y -o "DPkg::Options::=--force-confold" -o "DPkg::Options::=--force-confdef" \
+        libcairo2 libpixman-1-0 libxkbcommon0 \
         install build-essential kmod libelf-dev libdrm-dev libegl1-mesa-dev libgles2-mesa \
         net-tools rfkill iptables iw iproute2 hostapd dnsmasq\
         software-properties-common curl \
